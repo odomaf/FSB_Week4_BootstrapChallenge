@@ -57,21 +57,24 @@
 
   // Initialize total in UI
   // TODO(1): set qTotal's text to total
-  // qTotal.textContent = ???
+  qTotal.textContent = 10;
 
   // -----------------------------
   // 4) RENDER
   // -----------------------------
   function render(){
     // Header + timer labels
+
     // TODO(2): show current question number (i+1 but capped to total)
-    // qIndex.textContent = ???
+    if (qIndex < total){
+      qIndex.textContent = i+1;
+    }
 
     // TODO(3): update the score badge text to "Score: X/Y"
-    // scoreBadge.textContent = ???
+    scoreBadge.textContent = `Score: ${score}/${total}`;
 
     // TODO(4): update the time label to show remaining seconds like "60s"
-    // timeText.textContent = ???
+    timeText.textContent = timeLeft;
 
     // Progress bar width & contextual color
     // pct should be the percentage of time remaining (0..100)
